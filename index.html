@@ -1,9 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CviceniJavaScript</title>
+    <title>Avionsalon - Objednávka letenek</title>
+    <link rel="stylesheet" href="mystyle.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="bg-image"></div>
+    <div class="content-wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="form-container">
+              <h1 class="mb-4 text-center">Objednávka letenek</h1>
+              <form id="letenkyForm" class="needs-validation" novalidate>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="destinace" class="form-label">Destinace:</label>
+                    <select id="destinace" class="form-select">
+                      <option value="500">Praha 500 Kč</option>
+                      <option value="3000">Frankfurt 3000 Kč</option>
+                      <option value="15000">New York 15000 Kč</option>
+                      <option value="30000">Sydney 30000 Kč</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="pocet" class="form-label">Počet letenek:</label>
+                    <select id="pocet" class="form-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="zpatecni" />
+                  <label class="form-check-label" for="zpatecni"
+                    >Zpáteční letenka</label
+                  >
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Třída:</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="trida"
+                      id="economy"
+                      value="1"
+                      checked />
+                    <label class="form-check-label" for="economy"
+                      >Economy class</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="trida"
+                      id="business"
+                      value="1.25" />
+                    <label class="form-check-label" for="business"
+                      >Business class</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="trida"
+                      id="royal"
+                      value="1.5" />
+                    <label class="form-check-label" for="royal"
+                      >Royal class</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Celková cena:</label>
+                  <div id="celkovaCena" class="form-control"></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="rozpocet" class="form-label"
+                      >Váš rozpočet:</label
+                    >
+                    <input type="number" class="form-control" id="rozpocet" />
+                  </div>
+                  <div class="col-md-6 d-flex align-items-end">
+                    <button
+                      type="button"
+                      id="kontrolaRozpoctu"
+                      class="btn btn-primary">
+                      Zkontrolovat rozpočet
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="vysledekKontroly"
+                  class="alert"
+                  style="display: none"></div>
+                <div class="mb-3">
+                  <label for="poznamka" class="form-label">Poznámka:</label>
+                  <textarea
+                    id="poznamka"
+                    class="form-control"
+                    rows="10"
+                    cols="40"
+                    placeholder="Zde můžete napsat svou poznámku..."></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+  </body>
 </html>
