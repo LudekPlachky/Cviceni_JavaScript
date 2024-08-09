@@ -1,1 +1,0 @@
-# Cviceni_JavaScript
